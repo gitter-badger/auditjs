@@ -45,6 +45,11 @@ configure({
     out: {
       type: 'stderr',
     },
+    _error: {
+      type: 'logLevelFilter',
+      appender: 'out',
+      level: 'error',
+    },
   },
   categories: {
     default: {
@@ -52,7 +57,7 @@ configure({
       level: 'error',
     },
     out: {
-      appenders: ['out'],
+      appenders: ['_error'],
       level: 'error',
     },
   },
