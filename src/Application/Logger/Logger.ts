@@ -42,10 +42,17 @@ configure({
       },
       filename: logPathFile,
     },
+    out: {
+      type: 'stderr',
+    },
   },
   categories: {
     default: {
       appenders: ['auditjs'],
+      level: 'error',
+    },
+    out: {
+      appenders: ['out'],
       level: 'error',
     },
   },
